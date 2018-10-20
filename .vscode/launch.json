@@ -19,7 +19,7 @@
       "type": "reactnative",
       "request": "launch",
       "platform": "ios",
-      "target": "iPhone X",
+      "target": "iPhone XS Max",
       "sourceMaps": true,
       "outDir": "${workspaceRoot}/.vscode/.react"
     },

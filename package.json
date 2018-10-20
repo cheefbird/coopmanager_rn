@@ -8,7 +8,8 @@
     "flow start": "flow start",
     "flow stop": "flow stop",
     "flow status": "flow status",
-    "flow coverage": "flow coverage"
+    "flow coverage": "flow coverage",
+    "run-ios": "react-native run-ios --simulator 'iPhone XS Max'"
   },
   "dependencies": {
     "lodash": "^4.17.11",
