@@ -6,6 +6,6 @@
   "plugins": ["react", "jsx-a11y", "import"],
   "extends": ["airbnb"],
   "rules": {
-    // overrides
+    "react/jsx-filename-extension": "off"
   }
 }
