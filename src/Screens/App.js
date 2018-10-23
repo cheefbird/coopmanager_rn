@@ -5,6 +5,7 @@ import { Text, SafeAreaView, StatusBar } from 'react-native';
 
 import ButtonPrimary from '../components/ButtonPrimary';
 import ButtonSecondary from '../components/ButtonSecondary';
+import LabeledInput from '../components/LabeledInput';
 import styles from './Styles/App';
 
 export default () => (
@@ -15,6 +16,12 @@ export default () => (
     <ButtonSecondary
       label="SECONDARY BUTTON"
       onPress={() => console.log('SECONDARY BUTTON PRESSED')}
+    />
+    <LabeledInput
+      label="Field Label"
+      placeholder="Enter text..."
+      secure={false}
+      handler={text => console.log(`Field Value: ${text}`)}
     />
   </SafeAreaView>
 );
