@@ -8,7 +8,7 @@ export default StyleSheet.create({
   container: {
     justifyContent: 'center',
     backgroundColor: 'transparent',
-    paddingHorizontal: 12,
+    paddingHorizontal: 25,
   },
   button: {
     alignItems: 'center',
@@ -17,7 +17,8 @@ export default StyleSheet.create({
     borderRadius: 10,
   },
   label: {
-    fontFamily: Fonts.type.base,
+    fontFamily: Fonts.type.bold,
     color: Colors.darkGreen,
+    fontSize: Fonts.size.h6,
   },
 });

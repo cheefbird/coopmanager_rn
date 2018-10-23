@@ -10,6 +10,6 @@ export default () => (
   <SafeAreaView style={styles.container}>
     <StatusBar barStyle="light-content" />
     <Text style={styles.welcome}>Welcome to React Native!</Text>
-    <ButtonPrimary label="LABEL" onPress={() => console.log('BUTTON PRESSED')} />
+    <ButtonPrimary label="PRESS ME" onPress={() => console.log('BUTTON PRESSED')} />
   </SafeAreaView>
 );
