@@ -21,4 +21,7 @@ export default StyleSheet.create({
     color: Colors.darkGreen,
     fontSize: Fonts.size.h6,
   },
+  underlay: {
+    color: Colors.pink,
+  },
 });

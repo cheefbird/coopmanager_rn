@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import { TouchableOpacity, View, Text } from 'react-native';
+import { TouchableHighlight, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './Styles/ButtonPrimary';
@@ -19,9 +19,14 @@ export default class ButtonPrimary extends PureComponent<Props> {
 
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button} onPress={onPress}>
+        <TouchableHighlight
+          underlayColor={styles.underlay.color}
+          activeOpacity={0.9}
+          style={styles.button}
+          onPress={onPress}
+        >
           <Text style={styles.label}>{label}</Text>
-        </TouchableOpacity>
+        </TouchableHighlight>
       </View>
     );
   }
