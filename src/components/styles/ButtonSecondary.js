@@ -13,13 +13,15 @@ export default StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    backgroundColor: Colors.lightRed,
+    backgroundColor: 'transparent',
+    borderColor: Colors.lightRed,
+    borderWidth: 3,
     padding: 10,
     borderRadius: 10,
   },
   label: {
     fontFamily: Fonts.type.bold,
-    color: Colors.darkGreen,
+    color: Colors.lightRed,
     fontSize: Fonts.size.h6,
   },
   underlay: {

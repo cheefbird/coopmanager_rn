@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import { TouchableHighlight, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
-import styles from './Styles/ButtonPrimary';
+import styles from './Styles/ButtonSecondary';
 
 type Function = () => void;
 
@@ -13,7 +13,7 @@ type Props = {
   onPress: Function,
 };
 
-export default class ButtonPrimary extends PureComponent<Props> {
+export default class ButtonSecondary extends PureComponent<Props> {
   render() {
     const { label, onPress } = this.props;
 
@@ -21,7 +21,7 @@ export default class ButtonPrimary extends PureComponent<Props> {
       <View style={styles.container}>
         <TouchableHighlight
           underlayColor={styles.underlay.color}
-          activeOpacity={0.9}
+          activeOpacity={0.99}
           style={styles.button}
           onPress={onPress}
         >
@@ -32,7 +32,7 @@ export default class ButtonPrimary extends PureComponent<Props> {
   }
 }
 
-ButtonPrimary.propTypes = {
+ButtonSecondary.propTypes = {
   label: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };
