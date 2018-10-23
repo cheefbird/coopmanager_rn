@@ -26,7 +26,7 @@ export default class LabeledInput extends PureComponent<Props, State> {
 
   textChanged = (text: string) => this.setState({ text });
 
-  submitValue = () => {
+  setValue = () => {
     const { text } = this.state;
     const { handler } = this.props;
 
@@ -45,7 +45,7 @@ export default class LabeledInput extends PureComponent<Props, State> {
           secureTextEntry={secure}
           style={styles.inputField}
           onChangeText={this.textChanged}
-          onSubmitEditing={this.submitValue}
+          onEndEditing={this.setValue}
         />
       </View>
     );

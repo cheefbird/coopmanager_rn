@@ -19,6 +19,7 @@ export default StyleSheet.create({
   },
   inputField: {
     height: 45,
+    minWidth: 200,
     borderColor: Colors.lightRed,
     borderWidth: 2,
     alignItems: 'stretch',
