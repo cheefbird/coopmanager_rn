@@ -1,12 +1,10 @@
 // @flow
 
 import React from 'react';
-import {
-  Text, SafeAreaView, StatusBar, View,
-} from 'react-native';
+import { Text, SafeAreaView, StatusBar } from 'react-native';
 
-import ButtonPrimary from './components/ButtonPrimary';
-import styles from './Styles';
+import ButtonPrimary from '../components/ButtonPrimary';
+import styles from './Styles/App';
 
 export default () => (
   <SafeAreaView style={styles.container}>

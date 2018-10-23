@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native';
 
-import { Fonts, Colors } from './Theme';
+import { Fonts, Colors } from '../../Theme';
 
 export default StyleSheet.create({
   container: {

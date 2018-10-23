@@ -1,7 +1,9 @@
+// @flow
+
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
-import styles from './styles/ButtonPrimary';
+import styles from './Styles/ButtonPrimary';
 
 export default function ButtonPrimary({ label, onPress }) {
   return (
