@@ -9,6 +9,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'transparent',
     paddingHorizontal: 25,
+    paddingVertical: 8,
   },
   button: {
     alignItems: 'center',
@@ -22,6 +23,6 @@ export default StyleSheet.create({
     fontSize: Fonts.size.h6,
   },
   underlay: {
-    color: Colors.pink,
+    color: Colors.purple,
   },
 });
