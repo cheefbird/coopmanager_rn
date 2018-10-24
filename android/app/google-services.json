@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "578341291434",
+    "firebase_url": "https://babysitting-coop.firebaseio.com",
+    "project_id": "babysitting-coop",
+    "storage_bucket": "babysitting-coop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578341291434:android:dabeab8c15f1a472",
+        "android_client_info": {
+          "package_name": "com.coopmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578341291434-vdccv1qvafs3ebi1t18esh97t1jaqsgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsnPvUJfHGf2qp8CbI36Qdx0zYepMJabk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
