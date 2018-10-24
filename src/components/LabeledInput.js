@@ -1,15 +1,18 @@
 // @flow
 
-import React, { PureComponent } from 'react';
+import * as React from 'react';
 import { View, Text, TextInput } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './Styles/LabeledInput';
 
+type TextContentType = 'none' | 'username' | 'password';
+
 type Props = {
   label: string,
   placeholder: string,
   secure: boolean,
+  contentType: TextContentType,
   handler: (text: string) => void,
 };
 
@@ -17,7 +20,7 @@ type State = {
   text: string,
 };
 
-export default class LabeledInput extends PureComponent<Props, State> {
+export default class LabeledInput extends React.PureComponent<Props, State> {
   constructor(props: any) {
     super(props);
 
@@ -26,7 +29,7 @@ export default class LabeledInput extends PureComponent<Props, State> {
 
   textChanged = (text: string) => this.setState({ text });
 
-  submitValue = () => {
+  setValue = () => {
     const { text } = this.state;
     const { handler } = this.props;
 
@@ -34,7 +37,10 @@ export default class LabeledInput extends PureComponent<Props, State> {
   };
 
   render() {
-    const { label, placeholder, secure } = this.props;
+    const {
+      label, placeholder, secure, contentType,
+    } = this.props;
+
     return (
       <View style={styles.container}>
         <Text style={styles.label}>{label}</Text>
@@ -45,7 +51,9 @@ export default class LabeledInput extends PureComponent<Props, State> {
           secureTextEntry={secure}
           style={styles.inputField}
           onChangeText={this.textChanged}
-          onSubmitEditing={this.submitValue}
+          onEndEditing={this.setValue}
+          onSubmitEditing={this.setValue}
+          textContentType={contentType}
         />
       </View>
     );
@@ -56,5 +64,6 @@ LabeledInput.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   secure: PropTypes.bool.isRequired,
+  contentType: PropTypes.string.isRequired,
   handler: PropTypes.func.isRequired,
 };
