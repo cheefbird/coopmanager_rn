@@ -3,7 +3,7 @@
 import firebase from 'react-native-firebase';
 import { AUTHENTICATE_USER } from './types';
 
-export const authenticateUser = (email: string, password: string) => (dispatch) => {
+export const authenticateUser = (email: string, password: string) => (dispatch: any) => {
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
@@ -21,7 +21,7 @@ export const authenticateUser = (email: string, password: string) => (dispatch) 
         type: AUTHENTICATE_USER,
         payload: {
           isLoggedIn: false,
-          errorMessage: error,
+          errorMessage: error.message,
         },
       });
     });
