@@ -30,7 +30,6 @@ export default class LoginScreen extends Component<Props, State> {
   handlePassword = (text: string) => this.setState({ password: text });
 
   render() {
-    const { username } = this.state;
     return (
       <Card>
         <Text>Account Login</Text>
@@ -38,15 +37,17 @@ export default class LoginScreen extends Component<Props, State> {
           label="Username"
           placeholder="Enter your username..."
           secure={false}
+          contentType="username"
           handler={this.handleUsername}
         />
         <LabeledInput
           label="Password"
           placeholder="Enter your password..."
           secure
+          contentType="none"
           handler={this.handlePassword}
         />
-        <ButtonSecondary label="Log In" onPress={() => console.log(username)} />
+        <ButtonSecondary label="Log In" onPress={() => console.log(this.state)} />
       </Card>
     );
   }
