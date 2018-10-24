@@ -2,19 +2,19 @@
 
 import { StyleSheet } from 'react-native';
 
-import { Fonts, Colors } from '../../Theme';
+import { Colors, Fonts } from '../../Theme';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     backgroundColor: Colors.darkGreen,
+    paddingHorizontal: 20,
   },
-  welcome: {
-    fontFamily: Fonts.type.bold,
-    ...Fonts.style.h1,
+  headline: {
     color: Colors.pink,
+    fontSize: Fonts.size.h3,
+    padding: 10,
     textAlign: 'center',
-    margin: 10,
   },
 });

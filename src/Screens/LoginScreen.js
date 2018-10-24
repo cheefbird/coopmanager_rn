@@ -11,7 +11,7 @@ import ButtonSecondary from '../components/ButtonSecondary';
 import styles from './Styles/LoginScreen';
 
 type Props = {
-  navigate: NavigationScreenProp<{}>,
+  navigation: NavigationScreenProp<{}>,
 };
 
 type State = {
@@ -25,9 +25,19 @@ export default class LoginScreen extends Component<Props, State> {
     password: '',
   };
 
+  static navigationOptions = {
+    title: 'Login',
+  };
+
   handleUsername = (text: string) => this.setState({ username: text });
 
   handlePassword = (text: string) => this.setState({ password: text });
+
+  fakeLogin = () => {
+    const { navigation } = this.props;
+    console.log(this.state);
+    navigation.navigate('Home');
+  };
 
   render() {
     return (
@@ -47,7 +57,7 @@ export default class LoginScreen extends Component<Props, State> {
           contentType="none"
           handler={this.handlePassword}
         />
-        <ButtonSecondary label="Log In" onPress={() => console.log(this.state)} />
+        <ButtonSecondary label="Log In" onPress={this.fakeLogin} />
       </Card>
     );
   }
