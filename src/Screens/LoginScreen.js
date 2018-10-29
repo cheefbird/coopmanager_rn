@@ -4,10 +4,12 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Card from '../components/Card';
 import LabeledInput from '../components/LabeledInput';
 import ButtonSecondary from '../components/ButtonSecondary';
+import { authenticateUser } from '../Actions';
 import styles from './Styles/LoginScreen';
 
 type Props = {
@@ -19,14 +21,14 @@ type State = {
   password: string,
 };
 
-export default class LoginScreen extends Component<Props, State> {
+class LoginScreen extends Component<Props, State> {
+  static navigationOptions = {
+    title: 'Login',
+  };
+
   state = {
     username: '',
     password: '',
-  };
-
-  static navigationOptions = {
-    title: 'Login',
   };
 
   handleUsername = (text: string) => this.setState({ username: text });
@@ -38,6 +40,10 @@ export default class LoginScreen extends Component<Props, State> {
     console.log(this.state);
     navigation.navigate('Home');
   };
+
+  loginUser = (email: string, password: string) => {
+
+  }
 
   render() {
     return (
@@ -62,3 +68,14 @@ export default class LoginScreen extends Component<Props, State> {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  const { isLoggedIn, errorMessage } = state.userAuth;
+
+  return { isLoggedIn, errorMessage };
+};
+
+export default connect(
+  mapStateToProps,
+  { authenticateUser },
+)(LoginScreen);
